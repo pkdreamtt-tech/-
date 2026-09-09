@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2D1457;
+  --color-primary-light: #44207f;
+  --color-accent: #FFC300;
+  --color-accent-hover: #e5b000;
+  --color-bg: #F8F9FA;
+  --color-text: #1F1F1F;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom helper classes for Modern & Bold palette */
+.bg-deep-purple {
+  background-color: #2D1457;
+}
+
+.text-deep-purple {
+  color: #2D1457;
+}
+
+.border-deep-purple {
+  border-color: #2D1457;
+}
+
+.bg-vibrant-yellow {
+  background-color: #FFC300;
+}
+
+.hover\:bg-vibrant-yellow-hover:hover {
+  background-color: #e5b000;
+}
+
+.text-vibrant-yellow {
+  color: #FFC300;
+}
+
+.border-vibrant-yellow {
+  border-color: #FFC300;
+}
+
+.text-charcoal {
+  color: #1F1F1F;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Sarabun', sans-serif !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #printable-appendix,
+  #printable-appendix * {
+    visibility: visible;
+  }
+  #printable-appendix {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 12mm 15mm;
+  }
+}
+
+
